@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diene Ndiaye — Référent Digital & Designer UX/UI</title>
+<meta name="description" content="Diene Ndiaye, freelance à Dakar : création de sites web, WordPress, branding, communication digitale et SEO. Disponible pour de nouvelles collaborations.">
+<meta property="og:title" content="Diene Ndiaye — Référent Digital & Designer UX/UI">
+<meta property="og:description" content="Sites web, WordPress, branding et stratégie digitale. Freelance à Dakar, disponible pour de nouveaux projets.">
+<meta property="og:image" content="https://dnnika.github.io/assets/img/yowit.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0c; --surface:#141416; --surface-2:#1c1c1f; --line:#2a2a2e;
+    --text:#f2f2f0; --muted:#9a9a9f;
+    --lime:#d8fe00; --teal:#61bdc0;
+    --radius:18px; --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.1;letter-spacing:-.02em}
+  :focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:"Space Grotesk";font-weight:700;font-size:20px}
+  .logo span{color:var(--lime)}
+  .links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+  .links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--lime);color:#0b0b0c}
+  .btn-ghost{border:1px solid var(--line)}
+  .btn-ghost:hover{background:var(--surface-2)}
+  nav .btn{padding:9px 16px;font-size:14px}
+
+  /* hero */
+  .hero{padding-top:96px;padding-bottom:72px}
+  .status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:28px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(216,254,0,.6);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(216,254,0,0)}100%{box-shadow:0 0 0 0 rgba(216,254,0,0)}}
+  .hero h1{font-size:clamp(44px,8vw,96px);font-weight:700;max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--lime)}
+  .hero p{margin-top:24px;font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:56ch}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:72px;border-top:1px solid var(--line);padding-top:32px}
+  .stat b{display:block;font-family:"Space Grotesk";font-size:clamp(28px,4vw,44px);color:var(--text)}
+  .stat span{color:var(--muted);font-size:14px}
+
+  section{padding:88px 0;scroll-margin-top:40px}
+  .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);margin-bottom:12px}
+  .section-title{font-size:clamp(32px,5vw,52px);margin-bottom:40px;max-width:20ch}
+
+  /* services */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--teal);transform:translateY(-4px)}
+  .card .num{font-family:"Space Grotesk";color:var(--lime);font-size:14px}
+  .card h3{font-size:22px;margin:18px 0 10px}
+  .card p{color:var(--muted);font-size:15px}
+
+  /* work */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+  .filters button{background:none;border:1px solid var(--line);color:var(--muted);font:500 14px Inter,sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer}
+  .filters button:hover{color:var(--text)}
+  .filters button[aria-pressed="true"]{background:var(--text);color:#0b0b0c;border-color:var(--text)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .project[hidden]{display:none}
+  .project .thumb{aspect-ratio:3/2;overflow:hidden;background:var(--surface-2)}
+  .project img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .project:hover img{transform:scale(1.05)}
+  .project .body{padding:20px 22px 22px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex:1}
+  .project h3{font-size:18px;font-weight:500;letter-spacing:-.01em}
+  .tag{display:inline-block;font-size:12px;color:var(--teal);margin-bottom:6px}
+  .arrow{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s,color .2s}
+  .project:hover .arrow{background:var(--lime);color:#0b0b0c;border-color:var(--lime)}
+
+  /* tools */
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tools h3{font-size:16px;font-family:Inter;font-weight:600;margin-bottom:14px;color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{padding:7px 13px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);font-size:14px}
+
+  /* experience */
+  .timeline{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .tl h3{font-size:14px;font-family:Inter;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px}
+  .item{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .item .when{color:var(--muted);font-size:14px;padding-top:2px}
+  .item b{display:block;font-weight:600}
+  .item span{color:var(--muted);font-size:15px}
+
+  /* contact */
+  .contact{background:var(--lime);color:#0b0b0c;border-radius:28px;padding:clamp(40px,7vw,80px);text-align:center}
+  .contact h2{font-size:clamp(34px,6vw,64px);max-width:16ch;margin:0 auto}
+  .contact p{margin:18px auto 32px;max-width:48ch;font-size:18px;opacity:.75}
+  .contact .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+  .contact .btn-primary{background:#0b0b0c;color:var(--lime)}
+  .contact .btn-ghost{border-color:rgba(11,11,12,.25)}
+  .contact .btn-ghost:hover{background:rgba(11,11,12,.08)}
+
+  footer{padding:40px 0;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a:hover{color:var(--text)}
+
+  @media (max-width:960px){
+    .services{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .tools,.timeline{grid-template-columns:1fr}
+    .links{display:none}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 16px}
+    .hero{padding-top:64px;padding-bottom:48px}
+    .services,.grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr;gap:20px}
+    section{padding:64px 0}
+    .item{grid-template-columns:1fr;gap:4px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo">Diene<span>.</span></a>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#projets">Projets</a>
+      <a href="#outils">Outils</a>
+      <a href="#parcours">Parcours</a>
+    </div>
+    <a href="#contact" class="btn btn-primary">Me contacter</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="status"><span class="dot"></span>Freelance · Disponible pour de nouveaux projets</div>
+    <h1>Je donne aux marques une <em>présence digitale</em> qui compte.</h1>
+    <p>Diene Ndiaye — Référent Digital, Webmaster et Designer UX/UI à Dakar. Je conçois des sites web, des identités visuelles et des stratégies digitales qui allient créativité et technologie.</p>
+    <div class="cta">
+      <a href="#projets" class="btn btn-primary">Voir mes projets →</a>
+      <a href="https://dienendiaye.com" class="btn btn-ghost" target="_blank" rel="noopener">dienendiaye.com</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2020</b><span>en activité depuis</span></div>
+      <div class="stat"><b>20+</b><span>entreprises accompagnées</span></div>
+      <div class="stat"><b>4</b><span>langues : français, anglais, wolof, sérère</span></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title">Ce que je peux faire pour vous</h2>
+      <div class="services">
+        <div class="card"><span class="num">01</span><h3>Création de sites web</h3><p>Sites sur mesure, modernes, responsives et performants, avec WordPress ou en no-code.</p></div>
+        <div class="card"><span class="num">02</span><h3>Branding</h3><p>Logos et identités visuelles qui donnent du caractère à votre marque.</p></div>
+        <div class="card"><span class="num">03</span><h3>Communication digitale</h3><p>Stratégie, gestion des réseaux sociaux et création de contenus.</p></div>
+        <div class="card"><span class="num">04</span><h3>SEO & audit</h3><p>Audit, recherche de mots-clés, optimisation technique et suivi des performances.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets">
+    <div class="wrap">
+      <p class="eyebrow">Projets</p>
+      <h2 class="section-title">Une sélection de réalisations</h2>
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        <button type="button" data-filter="all" aria-pressed="true">Tous</button>
+        <button type="button" data-filter="web" aria-pressed="false">Sites web</button>
+        <button type="button" data-filter="ux" aria-pressed="false">UX/UI</button>
+        <button type="button" data-filter="branding" aria-pressed="false">Branding</button>
+        <button type="button" data-filter="seo" aria-pressed="false">SEO</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="outils">
+    <div class="wrap">
+      <p class="eyebrow">Outils</p>
+      <h2 class="section-title">Ma boîte à outils</h2>
+      <div class="tools">
+        <div class="card"><h3>Web & CMS</h3><div class="chips"><span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">HTML</span><span class="chip">Webflow</span><span class="chip">Framer</span><span class="chip">Vue.js</span><span class="chip">Angular</span><span class="chip">Magento</span></div></div>
+        <div class="card"><h3>Design</h3><div class="chips"><span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">Premiere Pro</span><span class="chip">Canva</span></div></div>
+        <div class="card"><h3>Marketing & gestion</h3><div class="chips"><span class="chip">Google Analytics</span><span class="chip">Semrush</span><span class="chip">HubSpot</span><span class="chip">Make</span><span class="chip">Notion</span><span class="chip">Jira</span><span class="chip">Trello</span><span class="chip">Slack</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours">
+    <div class="wrap">
+      <p class="eyebrow">Parcours</p>
+      <h2 class="section-title">Expérience & formation</h2>
+      <div class="timeline">
+        <div class="tl">
+          <h3>Expérience</h3>
+          <div class="item"><div class="when">Depuis 2020</div><div><b>Freelance — Studio Nika</b><span>Sites web, branding, communication digitale</span></div></div>
+          <div class="item"><div class="when">2024</div><div><b>Référent digital — YOWIT</b><span>Site web, présence en ligne et SEO</span></div></div>
+          <div class="item"><div class="when">2022</div><div><b>Designer — Mouvement And Liggey Sunu Rew</b><span>Supports visuels et communication</span></div></div>
+          <div class="item"><div class="when">2021</div><div><b>Coach en design graphique — E-Com Groupe</b><span>Formation et accompagnement</span></div></div>
+        </div>
+        <div class="tl">
+          <h3>Formation</h3>
+          <div class="item"><div class="when">2024 – 2025</div><div><b>Certification Référent Digital</b><span>Sonatel Academy</span></div></div>
+          <div class="item"><div class="when">2021 – 2024</div><div><b>Licence en communication digitale</b><span>UNCHK</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Un projet en tête ? Parlons-en.</h2>
+        <p>Site web, identité visuelle ou stratégie digitale : je suis disponible pour de nouvelles collaborations.</p>
+        <div class="cta">
+          <a href="https://dienendiaye.com/contact/" class="btn btn-primary" target="_blank" rel="noopener">Me contacter →</a>
+          <a href="https://www.linkedin.com/in/dndienend/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Diene Ndiaye · Studio Nika · Dakar</span>
+    <span><a href="https://github.com/dnnika">GitHub</a> · <a href="https://dienendiaye.com">dienendiaye.com</a></span>
+  </div>
+</footer>
+
+<script>
+  const P = "https://dienendiaye.com/portfolio/";
+  const projects = [
+    {t:"Site web Yowit", img:"yowit.png", url:"site-web-yowit/", tag:"Site web · SEO", cat:["web","seo"]},
+    {t:"Site web Sizeimpact", img:"sizeimpact.png", url:"site-web-sizeimpact/", tag:"Site web · SEO", cat:["web","seo"]},
+    {t:"Site web École 221", img:"ecole-221.png", url:"site-web-ecole-221/", tag:"Site web · SEO", cat:["web","seo"]},
+    {t:"Site web DigitalHub", img:"digitalhub.png", url:"site-web-digitalhub/", tag:"Site web", cat:["web"]},
+    {t:"Site web Nkac — Audit et Conseil", img:"nkac.png", url:"site-web/", tag:"Site web", cat:["web"]},
+    {t:"App Saveur d’Asie", img:"saveur-asie.webp", url:"maquette-app-saveur-dasie/", tag:"Maquette UX/UI", cat:["ux"]},
+    {t:"Saveur d’Asie — parcours restaurant", img:"saveur-asie-ux.jpg", url:"ux-ui/", tag:"UX/UI", cat:["ux"]},
+    {t:"Supports visuels E-Com Groupe", img:"ecom-groupe.webp", url:"creation-des-supports-visuels-e-com-groupe/", tag:"Branding", cat:["branding"]},
+    {t:"Visuel KFC", img:"kfc.webp", url:"visuel-kfc/", tag:"Réseaux sociaux", cat:["branding"]},
+    {t:"Appel à candidature Sonatel Academy", img:"sonatel-academy.webp", url:"creation-support-appel-a-candidature-sonatel-academy/", tag:"Support de communication", cat:["branding"]},
+    {t:"Identité visuelle", img:"identite-visuelle.jpg", url:"identite-visuelle/", tag:"Branding", cat:["branding"]}
+  ];
+  const grid = document.getElementById("grid");
+  grid.innerHTML = projects.map(p => `
+    <a class="project" href="${P + p.url}" target="_blank" rel="noopener" data-cat="${p.cat.join(" ")}">
+      <div class="thumb"><img src="assets/img/${p.img}" alt="${p.t}" loading="lazy" width="600" height="400"></div>
+      <div class="body"><div><span class="tag">${p.tag}</span><h3>${p.t}</h3></div><span class="arrow" aria-hidden="true">↗</span></div>
+    </a>`).join("");
+
+  document.querySelectorAll(".filters button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+      const f = btn.dataset.filter;
+      grid.querySelectorAll(".project").forEach(el => {
+        el.hidden = f !== "all" && !el.dataset.cat.split(" ").includes(f);
+      });
+    });
+  });
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
